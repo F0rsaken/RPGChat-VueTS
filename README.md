@@ -1,4 +1,4 @@
-# rpg-chat
+# RPGChat
 
 ## Project setup
 ```
