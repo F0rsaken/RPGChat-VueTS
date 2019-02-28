@@ -28,11 +28,12 @@
 
 - option to do /me or whatever its called like \*blushing furiously\*
 
-- all of it should be kinda like scripting: 
-    ex: \[\[tfx: type s: slow vfx: p1]]Jon: You shouldn't have called ME \[\[bg: dark_red]]
-    result: *Jon*: You shouldn't have called **ME**
+- all of it should be kinda like scripting:  
+    ex: \[\[tfx: type s: slow vfx: p1]]Jon: You shouldn't have called ME \[\[bg: dark_red]]  
+    result: *Jon*: You shouldn't have called **ME**  
     all text types letter by letter slowly with voice effect p1, at the end the background changes
-possibly more
+    
+- gui option to highlight part of the text and select the effects you want on it, maybe with checkboxes 
 
 ## Project setup
 ```
