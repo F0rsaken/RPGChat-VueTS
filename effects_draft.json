@@ -1,0 +1,60 @@
+{"head": {
+	"font": { //maybe add shortcut to just set font family, also add a way to rename fonts locally for convenience
+		"family": "deffont",
+		"color": "defcolor",
+		"size": "defsize",
+		"type": "regular"
+	},
+	"nickname": "defnick",
+	"effects": [],
+  }
+}
+
+//effects:
+{"typewriter": {
+	"speed": "normal", //maybe also integers? floats?
+	"sfx": "soundbankname",
+	//something's missing?
+  }
+}
+
+{"delay": {
+	"time": "<float/integer>"
+  }
+}
+
+{"background": {
+	"image": "filename" //jpg, gif, png
+  }
+}
+
+{"me"} //makes text after it display without nickname or dunno, to appear as action rather than someone speaking
+
+{"tremble": { //makes the letters shake
+	"amount": "low/med/high" //?
+  }
+}
+
+{"colorbleed": { //makes the letters bleed red and blue
+	"amount": "<integer>" 
+  }
+}
+
+// {"fuzzy": {
+// 	""
+//   }
+// }
+
+{"obfuscated"} //makes the letters change constantly, does not matter what you type, just the length (see: mc)
+
+//special:
+{"preset": { //or p:
+	"name": "p1" 
+  }
+} //should be processed first, should load head data onto current head, then process any additional effects in marker
+
+{"clear"} //or c, removes all effects, goes back to default
+{"clear":{ //clears any given parameter
+	//parameters
+  }
+}
