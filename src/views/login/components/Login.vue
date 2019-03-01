@@ -1,6 +1,6 @@
 <template>
     <div class="login-panel">
-        <img alt="Vue logo" src="../../../assets/logo.png" style="max-width: 200px;">
+        <img alt="Vue logo" src="../../../assets/logo.png" style="max-width: 185px;">
         <h2>Welcome<br>adventurer</h2>
         <div class="form-wrapper">
             <InputForm :label="'Login'" v-model="login"/>
@@ -47,7 +47,7 @@ export default class Login extends Vue {
     border-radius: 25px;
     border: 2px solid $color-1;
 
-    h2 { text-align: center; text-transform: uppercase; }
+    h2 { text-align: center; text-transform: uppercase; font-size: 28px; }
     .form-wrapper {
         width: 100%; display: flex; align-items: center; flex-direction: column;
     }
