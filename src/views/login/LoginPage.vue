@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import Login from '@/views/login/components/Login.vue'
+import Login from '@/views/login/Login.vue'
 
 export default Vue.extend({
     name: 'login-page',
@@ -19,5 +19,6 @@ export default Vue.extend({
 <style lang="scss" scoped>
 .login-wrapper {
     width: 100%;
+    padding: 10px 0;
 }
 </style>

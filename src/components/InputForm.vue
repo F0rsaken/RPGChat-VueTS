@@ -27,6 +27,8 @@ export default class InputForm extends Vue {
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/styles/consts.scss';
+
 .input-wrapper {
     width: 100%;
     max-width: 250px;
@@ -34,7 +36,11 @@ export default class InputForm extends Vue {
 
     p { font-size: 16px; margin: 0; text-align: center; }
     input {
-        width: 100%; box-sizing: border-box; font-size: 15px; padding: 5px 20px; border-radius: 5px; color: #3c3c3c;
+        width: 100%; box-sizing: border-box; font-size: 15px; padding: 6px 15px; border-radius: 5px;
+        // color: #3c3c3c;
+        color: #eaeaea;
+        border: 1px solid #eaeaea;
+        background-color: $background-color-global;
 
         &:focus { outline: none; }
     }

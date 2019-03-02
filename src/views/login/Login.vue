@@ -1,13 +1,13 @@
 <template>
     <div class="login-panel">
-        <img alt="Vue logo" src="../../../assets/logo.png" style="max-width: 185px;">
+        <img alt="Vue logo" src="../../assets/logo.png" style="max-width: 185px;">
         <h2>Welcome<br>adventurer</h2>
         <div class="form-wrapper">
-            <InputForm :label="'Login'" v-model="login"/>
-            <InputForm :type="'password'" :label="'Password'" v-model="password"/>
             <InputForm :label="'URL'" v-model="url"/>
+            <InputForm :type="'login'" :label="'Login'" v-model="login"/>
+            <InputForm :type="'password'" :label="'Password'" v-model="password"/>
         </div>
-        <ButtonDefault class="login-button" :text="'Login'"/>
+        <ButtonDefault class="login-button" :text="'Login'" @on-click="onLogin"/>
     </div>
 </template>
 
@@ -15,6 +15,11 @@
 import InputForm from '@/components/InputForm.vue'
 import ButtonDefault from '@/components/ButtonDefault.vue'
 import { Component, Vue } from 'vue-property-decorator'
+import { State, Action, namespace } from 'vuex-class'
+import { setTimeout } from 'timers';
+import { AuthPayload } from '@/store/auth/auth';
+
+const authModule = namespace('authModule');
 
 @Component({
     components: {
@@ -26,11 +31,26 @@ export default class Login extends Vue {
     public login: string = '';
     public password: string = '';
     public url: string = '';
+
+    @authModule.State('authenticated') loggingState: boolean;
+    @authModule.Action('login') loginAction: (arg: AuthPayload) => Promise<boolean>;
+
+    onLogin() {
+        this.loginAction({ login: this.login, password: this.password, url: this.url }).then((verified) => {
+            if (verified) {
+                this.$router.push({ name: 'chat' })
+            } else {
+                console.error('Auth didn\'t success');
+            }
+        })
+        // console.log(tmp);
+        console.log('login');
+    }
 }
 </script>
 
 <style lang="scss" scoped>
-@import '../../../assets/styles/consts.scss';
+@import '@/assets/styles/consts.scss';
 
 .login-panel {
     display: flex;
@@ -55,4 +75,3 @@ export default class Login extends Vue {
     .login-button { margin-top: 20px; }
 }
 </style>
-
