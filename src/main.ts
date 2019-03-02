@@ -3,7 +3,7 @@ import App from './App.vue'
 import router from './router'
 
 // global styles
-import './assets/styles/grid/simple-grid.scss'
+import './assets/styles/grid/grid.scss'
 import './assets/styles/style.scss'
 import store from './store/store'
 
