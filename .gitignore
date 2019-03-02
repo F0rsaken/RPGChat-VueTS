@@ -62,3 +62,5 @@ typings/
 
 #Electron-builder output
 /dist_electron.DS_Store
+
+dist_electron

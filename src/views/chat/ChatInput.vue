@@ -1,6 +1,6 @@
 <template>
     <div class="chat-input-wrapper">
-        <input type="text">
+        <input type="text" v-model="textInput">
     </div>
 </template>
 
@@ -8,7 +8,8 @@
 import Vue from 'vue'
 
 export default class ChatInput extends Vue {
-
+    // WIKTOR ta zmienna ma aktualną wartość inputa
+    public textInput: string;
 }
 </script>
 
