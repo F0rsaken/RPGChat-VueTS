@@ -26,7 +26,7 @@ export default class ChatInput extends Vue {
         // color: #3c3c3c;
         color: #eaeaea;
         border: 1px solid #eaeaea;
-        background-color: $background-color-global;
+        background-color: $background-color-1;
 
         &:focus { outline: none; }
     }
