@@ -44,7 +44,7 @@ export default class Login extends Vue {
             }
         })
         // console.log(tmp);
-        console.log('login');
+        // console.log('login');
     }
 }
 </script>

@@ -5,16 +5,18 @@ export const authModule: Module<AuthState, RootState> = {
     namespaced: true,
     state: <AuthState>{
         authenticated: false,
-        logging: false
+        logging: false,
+        userId: null
     },
     mutations: {
         logging(state, payload: AuthPayload) {
             state.logging = true;
-            console.log('logging', payload);
+            // console.log('logging', payload);
         },
         userAuthenticated(state) {
             state.logging = false;
             state.authenticated = true;
+            state.userId = 0;
         },
         userLogout(state) {
             state.authenticated = false;
@@ -38,7 +40,8 @@ export const authModule: Module<AuthState, RootState> = {
 
 export type AuthState = {
     authenticated: boolean,
-    logging: boolean
+    logging: boolean,
+    userId: number | null
 }
 
 export type AuthPayload = {
