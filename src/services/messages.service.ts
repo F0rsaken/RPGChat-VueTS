@@ -1,6 +1,8 @@
 import moment from 'moment'
 import { Observable } from 'rxjs'
 
+import irc from 'irc';
+
 export default new class MessagesService {
     private allMesseges: Message[];
     private subscription: Observable<Message>;
